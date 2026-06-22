@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Writing — Julianna Conley</title>
+  <meta name="description" content="Samples of Julianna's data visualizations." />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="pwebsite.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <nav class="navbar" role="navigation" aria-label="Primary">
+      <div class="container nav-inner">
+        <a class="brand" href="index.html">Julianna Conley</a>
+        <ul class="nav-list">
+          <li><a href="index.html">About</a></li>
+         <li><a href="resume.html">Resume</a></li>
+          <li><a href="writing.html">Writing</a></li>
+          <li><a href="multimedia.html">Multimedia</a></li>
+             <li><a href="datavisualization.html"aria-current="page">Data Visualizations</a></li>
+          <li><a href="index.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" class="container">
+    <section class="writing-hero">
+      <h1 class="section-title">Data Visualizations</h1>
+      <p class="lead">A sample of data visualizations from an investigative story about physical education compliance in Chicago Public Schools. </p>
+      <p class="lead">The story is currently being pitched to local outlets. Information and graphics are not to be used for distribution. Further details about the story are available upon request.</p>
+    </section>
+    
+    <section class="writing-filters">
+      <div class="container">
+        <h2 class="filters-note"> GeoJSON & Flourish </h2>
+<div class="flourish-embed flourish-map" data-src="visualisation/27954371"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/27954371/thumbnail" width="100%" alt="map visualization" /></noscript></div>
+      <p class ="lead">I obtained each of the 473 elementary schools' average days of P.E. from the Illinois Report Card, sorted schools by neigbhorhood and found the median average days of P.E. for each neighborhood. I then visualized this data using a map created with GeoJSON in Flourish.</p>
+      </div>
+
+      <div class="flourish-embed flourish-chart" data-src="visualisation/29456959"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/29456959/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
+    </section>
+
+    <section class="writing-filters">
+      <div class="container">
+        <h2 class="filters-note"> Canva </h2>
+<div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https://www.canva.com/design/DAHNSSOnv64/-acQoHsqqbaiBIgePM8nIA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+</div>
+<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAHNSSOnv64&#x2F;-acQoHsqqbaiBIgePM8nIA&#x2F;view?utm_content=DAHNSSOnv64&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener"> </a>     
+    <p class ="lead"> Looking at the Bronzeville neighborhood specifically, I created a histogram in Canva to illustrate the frequency of noncompliance, even within a specific neighborhood.</p>
+      </div>
+
+
+    </section>
+
+    <div class="container center">
+      <a class="btn-secondary" href="index.html">Back to Homepage</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year2"></span> Julianna Conley. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year2').textContent = new Date().getFullYear();
+  </script>
+
+  <script src="pwebsites.js"></script>
+</body>
+</html>
