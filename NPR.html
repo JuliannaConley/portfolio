@@ -8,6 +8,53 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="pwebsite.css" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<style>
+  /* ---- The key layout: thumbnail column + text column ---- */
+    .piece {
+      display: grid;
+      grid-template-columns: 300px 1fr;   /* left = thumbnail, right = text */
+      gap: 1.75rem;
+      align-items: center;                /* vertically centers text next to image */
+      margin-bottom: 2.25rem;
+    }
+ 
+    .thumb {
+      aspect-ratio: 3 / 2;                /* keeps every thumbnail the same shape */
+      background: var(--thumb-bg);        /* shows while the image loads or if missing */
+      overflow: hidden;
+    }
+    .thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;                  /* crops to fill the box without stretching */
+      display: block;
+    }
+ 
+    .category {
+      font-family: system-ui, sans-serif;
+      font-size: 0.85rem;
+      color: var(--accent);
+      margin: 0 0 0.2rem;
+    }
+    .category strong { margin-right: 0.35rem; }
+ 
+    .piece h2 {
+      font-size: 1.3rem;
+      line-height: 1.25;
+      margin: 0 0 0.35rem;
+    }
+    .piece h2 a { color: var(--ink); text-decoration: none; }
+    .piece h2 a:hover,
+    .piece h2 a:focus-visible { color: var(--accent); text-decoration: underline; }
+ 
+    .piece p.blurb { margin: 0; color: var(--muted); }
+ 
+    /* Stack on phones: thumbnail on top, text underneath */
+    @media (max-width: 600px) {
+      .piece { grid-template-columns: 1fr; gap: 0.9rem; }
+    }
+  </style>
+
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -30,44 +77,135 @@
 
   <main id="main" class="container">
     <section class="writing-hero">
-      <h1 class="section-title">Work for NPR</h1>
-      <p class="lead">Data visualizations and stories produced at NPR</p>
-  
-      <h2 class="filters-note"> Data Visualizations </h2>
-      <div class="about-actions">
-            <a class="btn-secondary" href="https://www.npr.org/2026/10/20/nx-s1-5989636/grocery-prices-eggs-coffee-inflation" target="_blank">Why these 5 everyday items fluctuate in price at the grocery store</a>
-                      </div>
-   
-            <div class="about-actions">
-            <a class="btn-outline" href="https://www.npr.org/2026/10/26/nx-s1-6000653/special-education-teacher-shortage" target="_blank">Special education teachers share the myths and realities of their job</a>
-                      </div>
-   
-            <div class="about-actions">
-            <a class="btn-secondary" href="https://www.npr.org/2026/10/26/nx-s1-6008167/republican-redistricting-midterms-competitive-map" target="_blank">Republicans are spending millions and still may not win districts drawn to favor them</a>
-                      </div>
-                      
-          <div class="about-actions">
-            <a class="btn-outline" href="https://www.npr.org/2026/10/27/nx-s1-6017479/2026-midterms-npr-poll-democrats-trump-approval" target="_blank">Democrats still poised to make gains, but poll shows warning signs for just how many</a>
-                      </div>
-
-        <a class="btn-secondary" href="https://www.npr.org/2026/10/30/g-s1-149975/2026-midterms-senate-map" target="_blank">Here are the Senate races to watch ahead of Election Day</a>
-                      </div>
-   
-            <div class="about-actions">
-            <a class="btn-outline" href="https://www.npr.org/2026/10/30/nx-s1-6014548/midterms-chatgpt-local-news-democrats" target="_blank">Websites pretending to be local news are boosting Democratic candidates</a>
-                      </div>
-   
-    </section>
-
-    <section>
-    <h2 class="filters-note"> Bylines </h2>
-      <div class="about-actions">
-            <a class="btn-secondary" href="https://www.npr.org/2026/11/04/nx-s1-6028080/voter-polls-midterms-demographics" target="_blank">See how Latinos, young voters and other demographic groups fueled Democrats' big wins</a>
-                      </div>
-   
-            <p></p>
-</section>
+      <h1 class="section-title">Editorial Graphics</h1>
+      <div class="container">
     
+        
+ <div style="max-width: 670px; margin-left: auto; margin-right: auto;">
+  <p data-pym-loader data-child-src="https://apps.npr.org/datawrapper/0TMul/5/" id="responsive-embed-0TMul">Loading...</p>
+  <script src="https://pym.nprapps.org/npr-pym-loader.v2.min.js"></script> 
+  <p>
+    <a href="https://www.npr.org/2026/10/20/nx-s1-5989636/grocery-prices-eggs-coffee-inflation" target="_blank" class="embed-link">
+      Read full article
+    </a>
+  </p>
+</div>
+  <p style="font-size: 20px;"> As NPR's editorial graphics intern, Julianna creates both quick-turn and enterprise graphics, combining visual design, data analysis and front-end web development. For her data visualizations, she codes with HTML, CSS and Javascript and uses Datawrapper and Adobe Illustrator. Her work includes (but is not limited to) annotated line charts, stacked bar charts, visual data tables, range plots, mirror bars and hexamaps.<p>
+
+        <h2>Graphics projects</h2>
+        
+
+        <!-- Copy this whole <article> block for each piece you add -->
+     <article class="piece">
+      <div class="thumb">
+        <img src="GenZ.png" alt="Thumbnail for Piece One" onerror="this.style.display='none'">
+      </div>
+      <div>
+        <p class="category"><strong>2026 Midterms elections</strong> NPR</p>
+        <h2><a href="https://www.npr.org/2026/11/08/nx-s1-6032829/gen-z-voters-midterm-elections" target="_blank" rel="noopener">How Gen Z voters helped fuel a blue wave for Democrats
+</a></h2>
+        <p class="blurb">As I watched race results roll in while working election night, I began compiling data on voting trends in key Senate and House contests. When the National Desk reached out for visuals on young voter results, I was able to not only turn around a chart within hours but also pitch and create another graphic comparing young voters to the state.</p>
+      </div>
+    </article>
+
+      <article class="piece">
+      <div class="thumb">
+        <img src="MidtermDemographics_newcrop.png" alt="Thumbnail for Piece One" onerror="this.style.display='none'">
+      </div>
+      <div>
+        <p class="category"><strong>2026 Midterms elections</strong> NPR</p>
+        <h2><a href="https://www.npr.org/2026/11/04/nx-s1-6028080/voter-polls-midterms-demographics" target="_blank" rel="noopener">See how Latinos, young voters and other demographic groups fueled Democrats' big wins
+</a></h2>
+        <p class="blurb">For this story, my colleague and I created graphics in advance of the midterm elections, gathering historical exit polls data and coding graphics in the NPR rig.
+          On the night of the election, I updated the data as new information became available.
+        </p>
+        <p></p>
+        <p class="blurb"> Due to our prep work, the initial story was able to go live on election night. In the days following, we went deeper, ultimately creating five graphics to illustrate voter demographics' swing to the left.  </p>
+      </div>
+    </article>
+
+    <article class="piece">
+      <div class="thumb">
+        <img src="SenateRacestoWatch.png" alt="Thumbnail for Piece One" onerror="this.style.display='none'">
+      </div>
+      <div>
+        <p class="category"><strong>2026 Midterms elections</strong> NPR</p>
+        <h2><a href="https://www.npr.org/2026/10/30/g-s1-149975/2026-midterms-senate-map" target="_blank" rel="noopener">Here are the Senate races to watch ahead of Election Day
+
+
+</a></h2>
+        <p class="blurb">I created a hexamap using CSS, HTML and Javascript to illustrate which state's Senate seats are most likely to flip in the midterm elections. I also edited a graphic in Adobe Illustrator, converting the file to HTML so that the graphic could be embedded responsive to different screen sizes.</p>
+      </div>
+    </article>
+
+     <article class="piece">
+      <div class="thumb">
+        <img src="AIWebsites.png" alt="Thumbnail for Piece One" onerror="this.style.display='none'">
+      </div>
+      <div>
+        <p class="category"><strong>2026 Midterms elections</strong> NPR</p>
+        <h2><a href="https://www.npr.org/2026/10/30/nx-s1-6014548/midterms-chatgpt-local-news-democrats" target="_blank" rel="noopener">Websites pretending to be local news are boosting Democratic candidates
+
+</a></h2>
+        <p class="blurb">I worked with a reporter to determine which data trends best lent themselves to a graphic and made a chart to accompany the story.</p>
+      </div>
+    </article>
+
+    <article class="piece">
+      <div class="thumb">
+        <img src="CostofLiving.png" alt="Thumbnail for Piece One" onerror="this.style.display='none'">
+      </div>
+      <div>
+        <p class="category"><strong>2026 Midterms elections</strong> NPR</p>
+        <h2><a href="https://www.npr.org/2026/10/27/nx-s1-6017479/2026-midterms-npr-poll-democrats-trump-approval" target="_blank" rel="noopener">Democrats still poised to make gains, but poll shows warning signs for just how many
+
+
+</a></h2>
+        <p class="blurb">Reading through poll results, I determined how to best represent Americans' responses to different questions. For this story, I created a range plot, stacked bar chart, table and mirror bars.</p>
+      </div>
+    </article>
+        
+    <article class="piece">
+      <div class="thumb">
+        <img src="RepublicanSpending.png" alt="Thumbnail for Piece One" onerror="this.style.display='none'">
+      </div>
+      <div>
+        <p class="category"><strong>2026 Midterms elections</strong> NPR</p>
+        <h2><a href="https://www.npr.org/2026/10/26/nx-s1-6008167/republican-redistricting-midterms-competitive-map" target="_blank" rel="noopener">Republicans are spending millions and still may not win districts drawn to favor them
+
+
+</a></h2>
+        <p class="blurb">For this quick-turn assignment, I created a table that made dense information easily digestible through color coding and in-cell bar charts.  </p>
+      </div>
+    </article>
+
+     <article class="piece">
+      <div class="thumb">
+        <img src="SpecialEducation.png" alt="Thumbnail for Piece One" onerror="this.style.display='none'">
+      </div>
+      <div>
+        <p class="category"><strong>Education</strong> NPR</p>
+        <h2><a href="https://www.npr.org/2026/10/26/nx-s1-6000653/special-education-teacher-shortage" target="_blank" rel="noopener">Special education teachers share the myths and realities of their job
+
+</a></h2>
+        <p class="blurb">I read through a dense, massive dataset, advising a reporting team on how to make sense of public data and the survey's methodology. I also coded a stacked bar chart using HTML, CSS and Javascript. </p>
+      </div>
+    </article>
+
+    <article class="piece">
+      <div class="thumb">
+        <img src="EggPrices.png" alt="Thumbnail for Piece One" onerror="this.style.display='none'">
+      </div>
+      <div>
+        <p class="category"><strong>Business</strong> NPR</p>
+        <h2><a href="https://www.npr.org/2026/10/20/nx-s1-5989636/grocery-prices-eggs-coffee-inflation" target="_blank" rel="noopener">Why these 5 everyday items fluctuate in price at the grocery store
+
+
+</a></h2>
+        <p class="blurb">For an "Only on NPR" story, I created an interactive grid of small multiples line charts with icons. I also created six line charts, annotating key dates and highlighting trends in the data.</p>
+      </div>
+    </article>
+
     <div class="container center">
       <a class="btn-secondary" href="index.html">Back to Homepage</a>
     </div>
